@@ -31,9 +31,9 @@ This image is optimized for use with **GRAV CMS**
 
 *docker-compose.yml*
 
-   version: '2'
+    version: '2'
 
-   services:
+    services:
       grav:
         image: maxvanderschee/grav:latest
         volumes:
