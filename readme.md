@@ -24,6 +24,7 @@ This image is optimized for use with **GRAV CMS**
          environment:
            CONF: non-ssl.conf
            APPURL: YOURWEBSITE.COM
+           SUBAPPURL: WWW.YOURWEBSITE.COM
          ports:
            - "80:80"
 
@@ -42,6 +43,7 @@ This image is optimized for use with **GRAV CMS**
         environment:
           CONF: ssl.conf
           APPURL: YOURWEBSITE.COM
+          SUBAPPURL: WWW.YOURWEBSITE.COM
         ports:
           - "80:80"
           - "443:443"
@@ -56,6 +58,3 @@ The last step is to restart Nginx.
 
 + Define the base image as **maxvanderschee/nginx-php**.
 + Install and update the core components for this new container like PHP7.0-cli, PHP7.0-gd, etc.
-
-### Updated
-10 july 2017
