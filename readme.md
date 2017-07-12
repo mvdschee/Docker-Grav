@@ -28,6 +28,9 @@ This image is optimized for use with **GRAV CMS**
          ports:
            - "80:80"
 
+The last step is to excute the bashscript:
+``docker exec CONTAINER_NAME bash /root/bash.sh``
+
 **Example ssl:**
 
 *docker-compose.yml*
@@ -52,7 +55,7 @@ The next step is to login to the container and execute:
 
 ``sudo letsencrypt certonly -a webroot --webroot-path=/var/www/app -d YOURWEBSITE.COM -d www.YOURWEBSITE.COM``
 
-The last step is to restart Nginx.
+`` bash /root/bash.sh``
 
 ### Dockerfile
 
