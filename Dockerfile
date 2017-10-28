@@ -6,3 +6,6 @@ LABEL maintainer "m.v.d.schee@ewake.nl"
 RUN apt-get update -q
 RUN apt-get install -y php7.0-cli php7.0-gd php7.0-curl php7.0-mbstring php7.0-xml php7.0-zip php-apcu
 RUN apt-get clean -q && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Set execute work directory
+WORKDIR /var/www/app
