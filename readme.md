@@ -21,10 +21,14 @@ This image is optimized for use with **GRAV CMS**
         container_name: grav
         environment:
           VIRTUAL_HOST: example.nl
+          VIRTUAL_PROTO: https
+          VIRTUAL_PORT: 443
           LETSENCRYPT_HOST: example.nl
           LETSENCRYPT_EMAIL: example@example.nl
         volumes:
           - "/var/www/grav:/var/www/app"
+        volumes_from:
+          - "nginx-proxy"
 
       nginx-proxy:
         image: jwilder/nginx-proxy
